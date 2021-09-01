@@ -15,13 +15,7 @@ The Node SDK offers both support for Node and Typescript/Node.
 npm install
 ```
 
-- Build :
-
-```bash
-npm run build
-```
-
-- Run :
+- Run
 
 ```bash
 npm start
@@ -29,24 +23,12 @@ npm start
 
 Note that for this particular step, you will need to setup an environment variable `KAIKO_API_KEY` with a valid Kaiko API key, otherwise you will get an error such as `PERMISSION_DENIED: not authorized`.
 
-## Build the example (Node only)
+## Points to observe
 
-- Install:
+- This script, differs from the example (<https://github.com/challengerdeep/kaiko-sdk-examples/blob/master/examples/node/index.ts#L160-L189>).
 
-```bash
-npm install
-```
+- The objective of this is to observe memory leaks and discuss an implementation to multiple requests upon a single stream client.
 
-- Build :
+- Few logs are presented, like the logs when a connection is RESET.
 
-```bash
-npm run build
-```
-
-- Run :
-
-```bash
-node dist/index.js
-```
-
-Note that for this particular step, you will need to setup an environment variable `KAIKO_API_KEY` with a valid Kaiko API key, otherwise you will get an error such as `PERMISSION_DENIED: not authorized`.
+- No handling was added to reconnect a missing connection in this example.

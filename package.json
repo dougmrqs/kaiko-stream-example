@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Example project",
   "scripts": {
-    "start:dev": "npx tsnd src/spotPrice.ts",
+    "start": "npx tsnd src/spotPrice.ts",
     "build": "npm run tsc",
     "tsc": "tsc"
   },
